@@ -112,6 +112,20 @@ body {
   color: #333;
 }
 
+/* Topics Section */
+.topics-list {
+  margin-top: 1.5rem;
+  padding-left: 1.2rem;
+  list-style-type: disc;
+  color: #333;
+  line-height: 1.6;
+}
+
+.topics-list li {
+  margin-bottom: 0.75rem;
+}
+
+
 /* Features grid */
 .features-grid {
   display: grid;
