@@ -25,6 +25,7 @@ body {
   top: 0;
   background: #fff;
   border-bottom: 1px solid #eee;
+  z-index: 1000;
 }
 
 .nav {
@@ -99,6 +100,41 @@ body {
   padding: 4rem 0;
 }
 
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.section h3 {
+  font-size: 1.6rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+.section p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Home Description Section */
+.home-description {
+  padding-top: 2rem;
+}
+
+.home-description ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.home-description ul li {
+  margin-bottom: 0.75rem;
+}
+
+/* Call for Papers Section */
 .call h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -107,25 +143,13 @@ body {
 .call p {
   font-size: 1rem;
   color: #333;
-}
-
-.about h2,
-.features h2,
-.contact h2 {
-  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.about p,
-.contact p {
-  font-size: 1rem;
-  color: #333;
-}
-
-/* Topics Section */
+/* Topics Section (for Home or CFP) */
 .topics-list {
-  margin-top: 1.5rem;
-  padding-left: 1.2rem;
+  margin-top: 1rem;
+  padding-left: 1.5rem;
   list-style-type: disc;
   color: #333;
   line-height: 1.6;
@@ -135,8 +159,32 @@ body {
   margin-bottom: 0.75rem;
 }
 
+/* Timeline Section */
+.timeline {
+  margin-top: 2rem;
+  padding-left: 1.5rem;
+  border-left: 2px solid #111;
+  list-style: none;
+}
 
-/* Features grid */
+.timeline li {
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #111;
+  border-radius: 50%;
+}
+
+/* Features grid (if used) */
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
