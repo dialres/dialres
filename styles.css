@@ -145,3 +145,44 @@ body {
   color: #777;
   font-size: 0.9rem;
 }
+
+/* Home page grid */
+.home-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap; /* makes it responsive */
+}
+
+.home-left {
+  flex: 2; /* left column takes 2/3 of width */
+}
+
+.home-right {
+  flex: 1; /* right column takes 1/3 of width */
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.home-right h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.organizers-list {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+  line-height: 1.6;
+}
+
+.organizers-list li {
+  margin-bottom: 0.75rem;
+}
+
+/* Make columns stack on small screens */
+@media (max-width: 800px) {
+  .home-grid {
+    flex-direction: column;
+  }
+}
+
