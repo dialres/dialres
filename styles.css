@@ -1,4 +1,4 @@
-/* Reset some default stuff */
+/* Reset defaults */
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +14,7 @@ body {
 
 .container {
   width: 90%;
-  max-width: 800px;
+  max-width: 900px; /* wider for nav links */
   margin: 0 auto;
   padding: 2rem 0;
 }
@@ -32,7 +32,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1rem 2rem; /* added padding to avoid cut-off */
 }
 
 .nav-logo {
@@ -45,7 +45,7 @@ body {
 .nav-list {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem; /* more space between links */
 }
 
 .nav-list a {
@@ -59,7 +59,7 @@ body {
   color: #555;
 }
 
-/* Hero / Landing */
+/* Hero */
 .hero {
   display: flex;
   justify-content: center;
@@ -80,21 +80,6 @@ body {
   color: #555;
 }
 
-.hero-button {
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  color: #fff;
-  background-color: #111;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.hero-button:hover {
-  background-color: #333;
-}
-
 /* Sections */
 .section {
   padding: 4rem 0;
@@ -106,7 +91,7 @@ body {
 }
 
 .section h3 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
   color: #111;
@@ -119,34 +104,7 @@ body {
   line-height: 1.6;
 }
 
-/* Home Description Section */
-.home-description {
-  padding-top: 2rem;
-}
-
-.home-description ul {
-  list-style-type: disc;
-  padding-left: 1.5rem;
-  margin-top: 1rem;
-}
-
-.home-description ul li {
-  margin-bottom: 0.75rem;
-}
-
-/* Call for Papers Section */
-.call h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.call p {
-  font-size: 1rem;
-  color: #333;
-  margin-bottom: 1rem;
-}
-
-/* Topics Section (for Home or CFP) */
+/* Topics List */
 .topics-list {
   margin-top: 1rem;
   padding-left: 1.5rem;
@@ -159,51 +117,7 @@ body {
   margin-bottom: 0.75rem;
 }
 
-/* Timeline Section */
-.timeline {
-  margin-top: 2rem;
-  padding-left: 1.5rem;
-  border-left: 2px solid #111;
-  list-style: none;
-}
-
-.timeline li {
-  margin-bottom: 1rem;
-  padding-left: 1rem;
-  position: relative;
-}
-
-.timeline li::before {
-  content: '';
-  position: absolute;
-  left: -9px;
-  top: 5px;
-  width: 10px;
-  height: 10px;
-  background-color: #111;
-  border-radius: 50%;
-}
-
-/* Features grid (if used) */
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.feature-item h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-  color: #111;
-}
-
-.feature-item p {
-  color: #555;
-  font-size: 1rem;
-}
-
-/* Contact Button */
+/* Contact */
 .contact-button {
   display: inline-block;
   margin-top: 1rem;
