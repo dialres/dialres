@@ -99,6 +99,16 @@ body {
   padding: 4rem 0;
 }
 
+.call h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.call p {
+  font-size: 1rem;
+  color: #333;
+}
+
 .about h2,
 .features h2,
 .contact h2 {
