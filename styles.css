@@ -1,3 +1,17 @@
+/* ===============================
+   COLOUR PALETTE (Mediterranean)
+   =============================== */
+:root {
+  --primary: #1f6f8b;
+  --primary-light: #e6f2f6;
+  --accent: #c05621;
+  --accent-light: #fde8dc;
+  --text-main: #102a43;
+  --text-muted: #486581;
+  --border-light: #d9e2ec;
+  --bg-light: #f8fafc;
+}
+
 /* Reset defaults */
 * {
   margin: 0;
@@ -5,16 +19,18 @@
   box-sizing: border-box;
 }
 
+/* Base */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  color: #111;
-  background-color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-main);
+  background-color: #ffffff;
   line-height: 1.6;
 }
 
 .container {
   width: 90%;
-  max-width: 900px; /* wider for nav links */
+  max-width: 1000px;
   margin: 0 auto;
   padding: 2rem 0;
 }
@@ -23,8 +39,8 @@ body {
 .site-header {
   position: sticky;
   top: 0;
-  background: #fff;
-  border-bottom: 1px solid #eee;
+  background: #ffffff;
+  border-bottom: 1px solid var(--border-light);
   z-index: 1000;
 }
 
@@ -32,52 +48,57 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem; /* added padding to avoid cut-off */
+  padding: 1rem 2rem;
 }
 
 .nav-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #111;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary);
   text-decoration: none;
 }
 
 .nav-list {
   list-style: none;
   display: flex;
-  gap: 2rem; /* more space between links */
+  gap: 2rem;
 }
 
 .nav-list a {
   text-decoration: none;
-  color: #111;
+  color: var(--text-main);
   font-size: 1rem;
   transition: color 0.2s ease;
 }
 
 .nav-list a:hover {
-  color: #555;
+  color: var(--accent);
 }
 
 /* Hero */
 .hero {
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  background: linear-gradient(
+    135deg,
+    var(--primary-light),
+    #ffffff
+  );
   text-align: center;
   padding: 0 1rem;
 }
 
 .hero-content h1 {
   font-size: 3rem;
+  color: var(--primary);
   margin-bottom: 0.5rem;
 }
 
 .hero-content p {
   font-size: 1.25rem;
-  margin-bottom: 1rem;
-  color: #555;
+  color: var(--text-muted);
 }
 
 /* Sections */
@@ -87,102 +108,98 @@ body {
 
 .section h2 {
   font-size: 2rem;
+  color: var(--primary);
   margin-bottom: 1.5rem;
+  border-bottom: 3px solid var(--primary-light);
+  padding-bottom: 0.5rem;
 }
 
 .section h3 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  color: var(--accent);
   margin-top: 2rem;
   margin-bottom: 1rem;
-  color: #111;
 }
 
 .section p {
   font-size: 1rem;
-  color: #333;
+  color: var(--text-main);
   margin-bottom: 1rem;
-  line-height: 1.6;
 }
 
-/* Topics List */
+/* Topics list */
 .topics-list {
-  margin-top: 1rem;
   padding-left: 1.5rem;
-  list-style-type: disc;
-  color: #333;
-  line-height: 1.6;
+  margin-top: 1rem;
 }
 
 .topics-list li {
   margin-bottom: 0.75rem;
 }
 
-/* Contact */
-.contact-button {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  color: #111;
-  background-color: #eee;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  transition: background 0.2s ease;
+.topics-list li::marker {
+  color: var(--accent);
 }
 
-.contact-button:hover {
-  background-color: #ddd;
-}
-
-/* Footer */
-.site-footer {
-  border-top: 1px solid #eee;
-  padding: 2rem 0;
-  text-align: center;
-}
-
-.site-footer p {
-  color: #777;
-  font-size: 0.9rem;
-}
-
-/* Home page grid */
+/* Home grid */
 .home-grid {
   display: flex;
   gap: 2rem;
-  flex-wrap: wrap; /* makes it responsive */
+  flex-wrap: wrap;
 }
 
 .home-left {
-  flex: 2; /* left column takes 2/3 of width */
+  flex: 2;
 }
 
 .home-right {
-  flex: 1; /* right column takes 1/3 of width */
-  background-color: #f9f9f9;
-  padding: 1rem;
+  flex: 1;
+  background-color: var(--accent-light);
+  border-left: 5px solid var(--accent);
+  padding: 1.5rem;
   border-radius: 8px;
 }
 
 .home-right h2 {
+  color: var(--accent);
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
 .organizers-list {
-  list-style-type: disc;
+  list-style: disc;
   padding-left: 1.2rem;
-  line-height: 1.6;
 }
 
 .organizers-list li {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.9rem;
+  line-height: 1.4;
 }
 
-/* Make columns stack on small screens */
+.organizers-list strong {
+  color: var(--primary);
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--bg-light);
+  border-top: 1px solid var(--border-light);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.site-footer p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Responsive */
 @media (max-width: 800px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
   .home-grid {
     flex-direction: column;
   }
 }
-
