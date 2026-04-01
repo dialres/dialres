@@ -5,10 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DialRes 2026 - Program</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Added styles for the search bar */
+    .search-container {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    #paperSearch {
+      width: 100%;
+      max-width: 600px;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: 2px solid #ddd;
+      border-radius: 25px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+    #paperSearch:focus {
+      border-color: #007bff;
+    }
+    /* Style for when no results are found */
+    #noResults {
+      display: none;
+      text-align: center;
+      color: #666;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- HEADER / NAVIGATION -->
   <header class="site-header">
     <nav class="nav">
       <a href="index.html" class="nav-logo">DialRes</a>
@@ -23,7 +49,6 @@
     </nav>
   </header>
 
-  <!-- PAGE TITLE -->
   <section class="hero">
     <div class="hero-content">
       <h1>Conference Program</h1>
@@ -31,157 +56,74 @@
     </div>
   </section>
 
-  <!-- PROGRAM CONTENT -->
   <section class="section">
     <div class="container">
-
       <h2>Accepted Papers</h2>
 
+      <div class="search-container">
+        <input type="text" id="paperSearch" placeholder="Search by title or author..." onkeyup="filterPapers()">
+      </div>
+
       <div class="paper-list" id="paperList">
+        <div class="paper">
+          <h3>Beyond Accuracy: Analyzing Dialect Confusion in Automatic Speech-Based Dialect Classification</h3>
+          <p>Lea Fischbach, Alfred Lameli and Lucie Flek</p>
+        </div>
 
-  <div class="paper">
-    <h3>Beyond Accuracy: Analyzing Dialect Confusion in Automatic Speech-Based Dialect Classification</h3>
-    <p>Lea Fischbach, Alfred Lameli and Lucie Flek</p>
-  </div>
+        <div class="paper">
+          <h3>FLEURS-Kobani: Extending FLEURS dataset for Northern Kurdish</h3>
+          <p>Daban Q. Jaff and Mohammad Mohammadamini</p>
+        </div>
 
-  <div class="paper">
-    <h3>FLEURS-Kobani: Extending FLEURS dataset for Northern Kurdish</h3>
-    <p>Daban Q. Jaff and Mohammad Mohammadamini</p>
-  </div>
+        <div class="paper">
+          <h3>Exploring the reusability of Northern Kurdish resources for Badini speech recognition</h3>
+          <p>Mohammad Mohammadamini, Aveen Jalal Mohammed, Barzan Hussein Mohammed, Dezheen H. Abdulazeez, Imad Saeed Sadeeq, Dilgash Mohammed Salih, Amera Ismail Melhum and Abuobaida Abdullah Dheyab</p>
+        </div>
 
-  <div class="paper">
-    <h3>Exploring the reusability of Northern Kurdish resources for Badini speech recognition</h3>
-    <p>Mohammad Mohammadamini, Aveen Jalal Mohammed, Barzan Hussein Mohammed, Dezheen H. Abdulazeez, Imad Saeed Sadeeq, Dilgash Mohammed Salih, Amera Ismail Melhum and Abuobaida Abdullah Dheyab</p>
-  </div>
+        <div class="paper">
+          <h3>First Steps in ASR for Cypriot Greek: Challenges and Insights</h3>
+          <p>Vivian Stamou, Spyros Armostis, Antigoni Klimi, Georgios Paraskevopoulos, Vassilis Katsouros and Antonios Anastasopoulos</p>
+        </div>
+      </div>
 
-  <div class="paper">
-    <h3>Wancho Dialectometry: Community-created data and the Living Dictionaries project</h3>
-    <p>Kellen Parker van Dam</p>
-  </div>
+      <p id="noResults">No papers found matching your search.</p>
+    </div>
+  </section>
 
-  <div class="paper">
-    <h3>Dialectometry and Evaluation of the ePark Corpus for Low-Resource Formosan Language Dialects</h3>
-    <p>Henry Gagnier</p>
-  </div>
-
-  <div class="paper">
-    <h3>Beyond the National Standard: Multi-Dialectal NLP and the "No Dialect Left Behind" Framework for the Saaho Language</h3>
-    <p>Jama Musse Jama</p>
-  </div>
-
-  <div class="paper">
-    <h3>A Dialectal Corpus for Ukrainian: Collection, Classification, and Standardization</h3>
-    <p>Yuliia Frund and Sina Ahmadi</p>
-  </div>
-
-  <div class="paper">
-    <h3>German Dialects Across Situations, Generations, and Regions: The REDE corpus as an Oral Resource for NLP</h3>
-    <p>Hanna Fischer and Alfred Lameli</p>
-  </div>
-
-  <div class="paper">
-    <h3>Can LLM Agents Identify Spoken Dialects like a Linguist?</h3>
-    <p>Tobias Bystrich, Lukas Hamm, Maria Hassan Akhter, Lea Fischbach, Lucie Flek and Akbar Karimi</p>
-  </div>
-
-  <div class="paper">
-    <h3>Saar-Voice: A Multi-Speaker Saarbrücken Dialect Speech Corpus</h3>
-    <p>Lena Sophie Oberkircher, Jesujoba Alabi, Dietrich Klakow and Jürgen Trouvain</p>
-  </div>
-
-  <div class="paper">
-    <h3>A Catalog of Basque Dialectal Resources: Online Collections and Standard-to-Dialectal Adaptations</h3>
-    <p>Jaione Bengoetxea, Itziar Gonzalez-Dios and Rodrigo Agerri</p>
-  </div>
-
-  <div class="paper">
-    <h3>Phonologically-aware Automatic Speech Recognition Evaluation of Low-Resource Languages: The Case of Basque Dialects</h3>
-    <p>Christoforos Souganidis, Asier Herranz, Ibon Saratxaga, Eva Navas and Inma Hernaez</p>
-  </div>
-
-  <div class="paper">
-    <h3>WoVis: Interactive Visualization of Word Embeddings for Semantic Change in Historical and Dialectal Language Resources</h3>
-    <p>Filip Miletić, Maximilian Henkel, Rene Cutura, Sophie Sadler, Quynh Quang Ngo, Michael Sedlmair and Sabine Schulte im Walde</p>
-  </div>
-
-  <div class="paper">
-    <h3>Speaker Normalization via Voice Conversion Reveals a Human-Machine Dissociation in Dialect Classification</h3>
-    <p>Caroline Kleen, Lea Fischbach, Akbar Karimi, Lucie Flek and Alfred Lameli</p>
-  </div>
-
-  <div class="paper">
-    <h3>South Tyrolean Dialect-to-Standard Speech Translation</h3>
-    <p>Greta H. Franzini and Luca Ducceschi</p>
-  </div>
-
-  <div class="paper">
-    <h3>TransVar – the Corpus for Variation and Change Study of the Historical Transcarpathian lects</h3>
-    <p>Ilia Afanasev</p>
-  </div>
-
-  <div class="paper">
-    <h3>The Generator-Eraser Paradox: Community Guidelines for Responsible LLM-Assisted Dialect Resource Creation</h3>
-    <p>Wajdi Zaghouani</p>
-  </div>
-
-  <div class="paper">
-    <h3>The Texas German Dialect Project Corpus as a Diachronic Resource for Investigating Language Contact</h3>
-    <p>Thomas Schmidt, Margaret M. Blevins, Hans C. Boas and Glenn Gilbert</p>
-  </div>
-
-  <div class="paper">
-    <h3>Pontic Greek in the Caucasus: an online corpus</h3>
-    <p>Svetlana Berikashvili and Stavros Skopeteas</p>
-  </div>
-
-  <div class="paper">
-    <h3>Meaning Over Morphology: A Multi-Metric Benchmark of LLMs for Bangla Dialect Translation</h3>
-    <p>Soumik Deb Niloy, Subhey Sadi Rahman, Mahbub E Sobhani, Md. Golam Rabiul Alam, Farig Yousuf Sadeque and Md. Rezuwan Hassan</p>
-  </div>
-
-  <div class="paper">
-    <h3>Sociolinguistic aspects of crowdsourcing for a vocal corpus of Alsatian</h3>
-    <p>Pascale Erhart, Lucile Hamm, Sam Bigeard, Carole Werner, Malek Yaich and Slim Ouni</p>
-  </div>
-
-  <div class="paper">
-    <h3>HeptaTAX: A Neuro-Symbolic Pipeline and Benchmark for Classifying 16th-Century Heptanesian Notarial Acts</h3>
-    <p>Stergios Chatzikyriakidis, Eleni Karantzola and Vasiliki Makri</p>
-  </div>
-
-  <div class="paper">
-    <h3>Towards Semantic Access and Interoperability in Digital Dialectal Atlases. A Case Study</h3>
-    <p>Paola Marongiu and Simonetta Montemagni</p>
-  </div>
-
-  <div class="paper">
-    <h3>A Bolu: A Structured Dataset for the Computational Analysis of Sardinian Improvisational Poetry</h3>
-    <p>Silvio Calderaro and Johanna Monti</p>
-  </div>
-
-  <div class="paper">
-    <h3>A CLDF-Compliant Lexical Database for Modern Greek Dialects: Resource Design and Dialectometric Analysis</h3>
-    <p>Stavros Bompolas, Natalia Chousou-Polydouri, Manuela Genitsaridi, Danae Karatzanou, Georgios Kostopoulos, Elena Anagnostopoulou and Dimitra Melissaropoulou</p>
-  </div>
-
-  <div class="paper">
-    <h3>A Speech Resource for the Pontic Greek Dialect: Transcription Choices and Baseline ASR Evaluation</h3>
-    <p>Rodanna Konstantinidou, Chara Tsoukala, Vivian Stamou, Voula Giouli and Stella Markantonatou</p>
-  </div>
-
-  <div class="paper">
-    <h3>First Steps in ASR for Cypriot Greek: Challenges and Insights</h3>
-    <p>Vivian Stamou, Spyros Armostis, Antigoni Klimi, Georgios Paraskevopoulos, Vassilis Katsouros and Antonios Anastasopoulos</p>
-  </div>
-
-</div>
-
-  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
       <p>&copy; 2026 DialRes. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    function filterPapers() {
+      // 1. Get the search input value and convert to lowercase
+      let input = document.getElementById('paperSearch').value.toLowerCase();
+      
+      // 2. Get all paper elements
+      let paperList = document.getElementById('paperList');
+      let papers = paperList.getElementsByClassName('paper');
+      let visibleCount = 0;
+
+      // 3. Loop through all papers and hide those that don't match
+      for (let i = 0; i < papers.length; i++) {
+        let title = papers[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+        let authors = papers[i].getElementsByTagName('p')[0].innerText.toLowerCase();
+
+        if (title.includes(input) || authors.includes(input)) {
+          papers[i].style.display = ""; // Show
+          visibleCount++;
+        } else {
+          papers[i].style.display = "none"; // Hide
+        }
+      }
+
+      // 4. Show "No Results" message if zero papers match
+      let noResultsMsg = document.getElementById('noResults');
+      noResultsMsg.style.display = visibleCount === 0 ? "block" : "none";
+    }
+  </script>
 
 </body>
 </html>
