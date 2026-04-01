@@ -3,317 +3,343 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DialRes 2026 - Accepted Papers</title>
+  <title>DialRes 2026 - Program</title>
+  <link rel="stylesheet" href="styles.css" />
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 1100px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; }
-    .header-area { text-align: center; margin-bottom: 40px; }
-    
-    /* Search Styling */
-    .search-box-container { position: sticky; top: 10px; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); z-index: 100; margin-bottom: 30px; }
-    #paperSearch { width: 100%; padding: 15px; font-size: 18px; border: 2px solid #ddd; border-radius: 8px; outline: none; box-sizing: border-box; }
-    #paperSearch:focus { border-color: #007bff; }
+    /* Search Bar Styling */
+    .search-container {
+      margin: 20px 0 40px 0;
+      text-align: center;
+    }
+    #paperSearch {
+      width: 100%;
+      max-width: 800px;
+      padding: 15px 25px;
+      font-size: 1.1rem;
+      border: 2px solid #ddd;
+      border-radius: 30px;
+      outline: none;
+      transition: border-color 0.3s;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    #paperSearch:focus {
+      border-color: #007bff;
+    }
 
-    /* Table Styling */
-    table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; }
-    th { background-color: #0056b3; color: white; text-align: left; padding: 15px; }
-    td { padding: 15px; border-bottom: 1px solid #eee; vertical-align: top; }
-    tr:hover { background-color: #f1f7ff; }
-    
-    .paper-id { font-weight: bold; color: #666; width: 50px; }
-    .paper-title { font-weight: bold; color: #0056b3; display: block; margin-bottom: 5px; font-size: 1.1rem; }
-    .paper-authors { color: #555; font-style: italic; font-size: 0.95rem; }
-
-    #noResults { display: none; text-align: center; padding: 20px; font-weight: bold; color: #999; }
+    /* ID Badge Styling */
+    .paper {
+      position: relative;
+      padding: 20px;
+      border-bottom: 1px solid #eee;
+      margin-bottom: 10px;
+    }
+    .submission-id {
+      display: inline-block;
+      background: #f0f0f0;
+      color: #666;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .paper h3 {
+      margin: 5px 0;
+      color: #0056b3;
+    }
+    .paper p {
+      margin: 5px 0;
+      font-style: italic;
+      color: #444;
+    }
+    #noResults {
+      display: none;
+      text-align: center;
+      padding: 50px;
+      color: #888;
+      font-size: 1.2rem;
+    }
   </style>
 </head>
 <body>
 
-  <div class="header-area">
-    <h1>DialRes 2026</h1>
-    <p>Complete List of Accepted Papers</p>
-  </div>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="nav-logo">DialRes</a>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="program.html">Program</a></li>
+        <li><a href="call.html">Call for Papers</a></li>
+        <li><a href="committee.html">Program Committee</a></li>
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="conferenceprogram.html">Conference Program</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="search-box-container">
-    <input type="text" id="paperSearch" placeholder="Search titles, authors, or IDs..." onkeyup="searchFunction()">
-  </div>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Conference Program</h1>
+      <p>Accepted Papers</p>
+    </div>
+  </section>
 
-  <table id="papersTable">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Paper</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="paper-id">2</td>
-        <td>
-          <span class="paper-title">Beyond Accuracy: Analyzing Dialect Confusion in Automatic Speech-Based Dialect Classification</span>
-          <span class="paper-authors">Lea Fischbach, Alfred Lameli and Lucie Flek</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">3</td>
-        <td>
-          <span class="paper-title">FLEURS-Kobani: Extending FLEURS dataset for Northern Kurdish</span>
-          <span class="paper-authors">Daban Q. Jaff and Mohammad Mohammadamini</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">4</td>
-        <td>
-          <span class="paper-title">Exploring the reusability of Northern Kurdish resources for Badini speech recognition</span>
-          <span class="paper-authors">Mohammad Mohammadamini, Aveen Jalal Mohammed, Barzan Hussein Mohammed, Dezheen H. Abdulazeez, Imad Saeed Sadeeq, Dilgash Mohammed Salih, Amera Ismail Melhum and Abuobaida Abdullah Dheyab</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">5</td>
-        <td>
-          <span class="paper-title">Wancho Dialectometry: Community-created data and the Living Dictionaries project</span>
-          <span class="paper-authors">Kellen Parker van Dam</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">6</td>
-        <td>
-          <span class="paper-title">Dialectometry and Evaluation of the ePark Corpus for Low-Resource Formosan Language Dialects</span>
-          <span class="paper-authors">Henry Gagnier</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">7</td>
-        <td>
-          <span class="paper-title">Beyond the National Standard: Multi-Dialectal NLP and the "No Dialect Left Behind" Framework for the Saaho Language</span>
-          <span class="paper-authors">Jama Musse Jama</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">8</td>
-        <td>
-          <span class="paper-title">A Dialectal Corpus for Ukrainian: Collection, Classification, and Standardization</span>
-          <span class="paper-authors">Yuliia Frund and Sina Ahmadi</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">10</td>
-        <td>
-          <span class="paper-title">German Dialects Across Situations, Generations, and Regions: The REDE corpus as an Oral Resource for NLP</span>
-          <span class="paper-authors">Hanna Fischer and Alfred Lameli</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">11</td>
-        <td>
-          <span class="paper-title">Can LLM Agents Identify Spoken Dialects like a Linguist?</span>
-          <span class="paper-authors">Tobias Bystrich, Lukas Hamm, Maria Hassan Akhter, Lea Fischbach, Lucie Flek and Akbar Karimi</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">12</td>
-        <td>
-          <span class="paper-title">Saar-Voice: A Multi-Speaker Saarbrücken Dialect Speech Corpus</span>
-          <span class="paper-authors">Lena Sophie Oberkircher, Jesujoba Alabi, Dietrich Klakow and Jürgen Trouvain</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">13</td>
-        <td>
-          <span class="paper-title">A Catalog of Basque Dialectal Resources: Online Collections and Standard-to-Dialectal Adaptations</span>
-          <span class="paper-authors">Jaione Bengoetxea, Itziar Gonzalez-Dios and Rodrigo Agerri</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">14</td>
-        <td>
-          <span class="paper-title">Phonologically-aware Automatic Speech Recognition Evaluation of Low-Resource Languages: The Case of Basque Dialects</span>
-          <span class="paper-authors">Christoforos Souganidis, Asier Herranz, Ibon Saratxaga, Eva Navas and Inma Hernaez</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">15</td>
-        <td>
-          <span class="paper-title">WoVis: Interactive Visualization of Word Embeddings for Semantic Change in Historical and Dialectal Language Resources</span>
-          <span class="paper-authors">Filip Miletić, Maximilian Henkel, Rene Cutura, Sophie Sadler, Quynh Quang Ngo, Michael Sedlmair and Sabine Schulte im Walde</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">16</td>
-        <td>
-          <span class="paper-title">Speaker Normalization via Voice Conversion Reveals a Human-Machine Dissociation in Dialect Classification</span>
-          <span class="paper-authors">Caroline Kleen, Lea Fischbach, Akbar Karimi, Lucie Flek and Alfred Lameli</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">17</td>
-        <td>
-          <span class="paper-title">South Tyrolean Dialect-to-Standard Speech Translation</span>
-          <span class="paper-authors">Greta H. Franzini and Luca Ducceschi</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">18</td>
-        <td>
-          <span class="paper-title">TransVar – the Corpus for Variation and Change Study of the Historical Transcarpathian lects</span>
-          <span class="paper-authors">Ilia Afanasev</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">19</td>
-        <td>
-          <span class="paper-title">The Generator-Eraser Paradox: Community Guidelines for Responsible LLM-Assisted Dialect Resource Creation</span>
-          <span class="paper-authors">Wajdi Zaghouani</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">20</td>
-        <td>
-          <span class="paper-title">The Texas German Dialect Project Corpus as a Diachronic Resource for Investigating Language Contact</span>
-          <span class="paper-authors">Thomas Schmidt, Margaret M. Blevins, Hans C. Boas and Glenn Gilbert</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">21</td>
-        <td>
-          <span class="paper-title">Pontic Greek in the Caucasus: an online corpus</span>
-          <span class="paper-authors">Svetlana Berikashvili and Stavros Skopeteas</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">22</td>
-        <td>
-          <span class="paper-title">Meaning Over Morphology: A Multi-Metric Benchmark of LLMs for Bangla Dialect Translation</span>
-          <span class="paper-authors">Soumik Deb Niloy, Subhey Sadi Rahman, Mahbub E Sobhani, Md. Golam Rabiul Alam, Farig Yousuf Sadeque and Md. Rezuwan Hassan</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">23</td>
-        <td>
-          <span class="paper-title">Sociolinguistic aspects of crowdsourcing for a vocal corpus of Alsatian</span>
-          <span class="paper-authors">Pascale Erhart, Lucile Hamm, Sam Bigeard, Carole Werner, Malek Yaich and Slim Ouni</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">25</td>
-        <td>
-          <span class="paper-title">HeptaTAX: A Neuro-Symbolic Pipeline and Benchmark for Classifying 16th-Century Heptanesian Notarial Acts</span>
-          <span class="paper-authors">Stergios Chatzikyriakidis, Eleni Karantzola and Vasiliki Makri</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">27</td>
-        <td>
-          <span class="paper-title">Towards Semantic Access and Interoperability in Digital Dialectal Atlases. A Case Study</span>
-          <span class="paper-authors">Paola Marongiu and Simonetta Montemagni</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">29</td>
-        <td>
-          <span class="paper-title">A Bolu: A Structured Dataset for the Computational Analysis of Sardinian Improvisational Poetry</span>
-          <span class="paper-authors">Silvio Calderaro and Johanna Monti</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">32</td>
-        <td>
-          <span class="paper-title">A CLDF-Compliant Lexical Database for Modern Greek Dialects: Resource Design and Dialectometric Analysis</span>
-          <span class="paper-authors">Stavros Bompolas, Natalia Chousou-Polydouri, Manuela Genitsaridi, Danae Karatzanou, Georgios Kostopoulos, Elena Anagnostopoulou and Dimitra Melissaropoulou</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">33</td>
-        <td>
-          <span class="paper-title">A Speech Resource for the Pontic Greek Dialect: Transcription Choices and Baseline ASR Evaluation</span>
-          <span class="paper-authors">Rodanna Konstantinidou, Chara Tsoukala, Vivian Stamou, Voula Giouli and Stella Markantonatou</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">34</td>
-        <td>
-          <span class="paper-title">First Steps in ASR for Cypriot Greek: Challenges and Insights</span>
-          <span class="paper-authors">Vivian Stamou, Spyros Armostis, Antigoni Klimi, Georgios Paraskevopoulos, Vassilis Katsouros and Antonios Anastasopoulos</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">35</td>
-        <td>
-          <span class="paper-title">Evaluating Cross-Dialect Syntactic Variation: a Theory-Driven Web Resource</span>
-          <span class="paper-authors">Emanuela Li Destri, Marco Longhin, Gaia Sorge, Sofia Ferroni, Giovanni Battista Matteazzi, Andrea Artioli, Lorenzo Carletti, Federico Motta, Giuseppe Longobardi and Cristina Guardiano</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">36</td>
-        <td>
-          <span class="paper-title">MD_NLP: Reconstructing an Australian English Heritage Dialect Corpus from the Mitchell–Delbridge Recordings through LLM-Assisted Speaker Attribution</span>
-          <span class="paper-authors">Steven Coats</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">37</td>
-        <td>
-          <span class="paper-title">Structural Divergence under Shared Language-Level Specification: Griko in Universal Dependencies</span>
-          <span class="paper-authors">Stavros Bompolas, Emanuela Pinna, Josep Quer, Marika Lekakou and Stella Markantonatou</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">38</td>
-        <td>
-          <span class="paper-title">Systematic Normalization of Spoken Mixed-Language, Mixed-Dialect Data</span>
-          <span class="paper-authors">Margaret Blevins</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">39</td>
-        <td>
-          <span class="paper-title">Digital Preservation of Aromanian Through Knowledge Management and Automatic Speech Recognition Evaluation</span>
-          <span class="paper-authors">Marija Pendevska and Hristina Nastevska</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">41</td>
-        <td>
-          <span class="paper-title">A Novel Typology of Mutually Intelligible Words: The Case of Slavic Languages</span>
-          <span class="paper-authors">Edward Klyshinsky and Yulia Badryzlova</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">42</td>
-        <td>
-          <span class="paper-title">Transfer Learning for an Endangered Slavic Variety: Dependency Parsing in Pomak Across Contact-Shaped Dialects</span>
-          <span class="paper-authors">Sercan Karakas</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="paper-id">43</td>
-        <td>
-          <span class="paper-title">Challenges in the Detection of Dialect for Historical Languages; the Case of Old Irish Text Resources</span>
-          <span class="paper-authors">Adrian Doyle</span>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <section class="section">
+    <div class="container">
 
-  <p id="noResults">No matching papers found.</p>
+      <h2>Accepted Papers</h2>
+
+      <div class="search-container">
+        <input type="text" id="paperSearch" placeholder="Search by ID, title, or authors..." onkeyup="filterPapers()">
+      </div>
+
+      <div class="paper-list" id="paperList">
+
+        <div class="paper">
+          <span class="submission-id">ID: 2</span>
+          <h3>Beyond Accuracy: Analyzing Dialect Confusion in Automatic Speech-Based Dialect Classification</h3>
+          <p>Lea Fischbach, Alfred Lameli and Lucie Flek</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 3</span>
+          <h3>FLEURS-Kobani: Extending FLEURS dataset for Northern Kurdish</h3>
+          <p>Daban Q. Jaff and Mohammad Mohammadamini</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 4</span>
+          <h3>Exploring the reusability of Northern Kurdish resources for Badini speech recognition</h3>
+          <p>Mohammad Mohammadamini, Aveen Jalal Mohammed, Barzan Hussein Mohammed, Dezheen H. Abdulazeez, Imad Saeed Sadeeq, Dilgash Mohammed Salih, Amera Ismail Melhum and Abuobaida Abdullah Dheyab</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 5</span>
+          <h3>Wancho Dialectometry: Community-created data and the Living Dictionaries project</h3>
+          <p>Kellen Parker van Dam</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 6</span>
+          <h3>Dialectometry and Evaluation of the ePark Corpus for Low-Resource Formosan Language Dialects</h3>
+          <p>Henry Gagnier</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 7</span>
+          <h3>Beyond the National Standard: Multi-Dialectal NLP and the "No Dialect Left Behind" Framework for the Saaho Language</h3>
+          <p>Jama Musse Jama</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 8</span>
+          <h3>A Dialectal Corpus for Ukrainian: Collection, Classification, and Standardization</h3>
+          <p>Yuliia Frund and Sina Ahmadi</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 10</span>
+          <h3>German Dialects Across Situations, Generations, and Regions: The REDE corpus as an Oral Resource for NLP</h3>
+          <p>Hanna Fischer and Alfred Lameli</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 11</span>
+          <h3>Can LLM Agents Identify Spoken Dialects like a Linguist?</h3>
+          <p>Tobias Bystrich, Lukas Hamm, Maria Hassan Akhter, Lea Fischbach, Lucie Flek and Akbar Karimi</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 12</span>
+          <h3>Saar-Voice: A Multi-Speaker Saarbrücken Dialect Speech Corpus</h3>
+          <p>Lena Sophie Oberkircher, Jesujoba Alabi, Dietrich Klakow and Jürgen Trouvain</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 13</span>
+          <h3>A Catalog of Basque Dialectal Resources: Online Collections and Standard-to-Dialectal Adaptations</h3>
+          <p>Jaione Bengoetxea, Itziar Gonzalez-Dios and Rodrigo Agerri</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 14</span>
+          <h3>Phonologically-aware Automatic Speech Recognition Evaluation of Low-Resource Languages: The Case of Basque Dialects</h3>
+          <p>Christoforos Souganidis, Asier Herranz, Ibon Saratxaga, Eva Navas and Inma Hernaez</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 15</span>
+          <h3>WoVis: Interactive Visualization of Word Embeddings for Semantic Change in Historical and Dialectal Language Resources</h3>
+          <p>Filip Miletić, Maximilian Henkel, Rene Cutura, Sophie Sadler, Quynh Quang Ngo, Michael Sedlmair and Sabine Schulte im Walde</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 16</span>
+          <h3>Speaker Normalization via Voice Conversion Reveals a Human-Machine Dissociation in Dialect Classification</h3>
+          <p>Caroline Kleen, Lea Fischbach, Akbar Karimi, Lucie Flek and Alfred Lameli</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 17</span>
+          <h3>South Tyrolean Dialect-to-Standard Speech Translation</h3>
+          <p>Greta H. Franzini and Luca Ducceschi</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 18</span>
+          <h3>TransVar – the Corpus for Variation and Change Study of the Historical Transcarpathian lects</h3>
+          <p>Ilia Afanasev</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 19</span>
+          <h3>The Generator-Eraser Paradox: Community Guidelines for Responsible LLM-Assisted Dialect Resource Creation</h3>
+          <p>Wajdi Zaghouani</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 20</span>
+          <h3>The Texas German Dialect Project Corpus as a Diachronic Resource for Investigating Language Contact</h3>
+          <p>Thomas Schmidt, Margaret M. Blevins, Hans C. Boas and Glenn Gilbert</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 21</span>
+          <h3>Pontic Greek in the Caucasus: an online corpus</h3>
+          <p>Svetlana Berikashvili and Stavros Skopeteas</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 22</span>
+          <h3>Meaning Over Morphology: A Multi-Metric Benchmark of LLMs for Bangla Dialect Translation</h3>
+          <p>Soumik Deb Niloy, Subhey Sadi Rahman, Mahbub E Sobhani, Md. Golam Rabiul Alam, Farig Yousuf Sadeque and Md. Rezuwan Hassan</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 23</span>
+          <h3>Sociolinguistic aspects of crowdsourcing for a vocal corpus of Alsatian</h3>
+          <p>Pascale Erhart, Lucile Hamm, Sam Bigeard, Carole Werner, Malek Yaich and Slim Ouni</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 25</span>
+          <h3>HeptaTAX: A Neuro-Symbolic Pipeline and Benchmark for Classifying 16th-Century Heptanesian Notarial Acts</h3>
+          <p>Stergios Chatzikyriakidis, Eleni Karantzola and Vasiliki Makri</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 27</span>
+          <h3>Towards Semantic Access and Interoperability in Digital Dialectal Atlases. A Case Study</h3>
+          <p>Paola Marongiu and Simonetta Montemagni</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 29</span>
+          <h3>A Bolu: A Structured Dataset for the Computational Analysis of Sardinian Improvisational Poetry</h3>
+          <p>Silvio Calderaro and Johanna Monti</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 32</span>
+          <h3>A CLDF-Compliant Lexical Database for Modern Greek Dialects: Resource Design and Dialectometric Analysis</h3>
+          <p>Stavros Bompolas, Natalia Chousou-Polydouri, Manuela Genitsaridi, Danae Karatzanou, Georgios Kostopoulos, Elena Anagnostopoulou and Dimitra Melissaropoulou</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 33</span>
+          <h3>A Speech Resource for the Pontic Greek Dialect: Transcription Choices and Baseline ASR Evaluation</h3>
+          <p>Rodanna Konstantinidou, Chara Tsoukala, Vivian Stamou, Voula Giouli and Stella Markantonatou</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 34</span>
+          <h3>First Steps in ASR for Cypriot Greek: Challenges and Insights</h3>
+          <p>Vivian Stamou, Spyros Armostis, Antigoni Klimi, Georgios Paraskevopoulos, Vassilis Katsouros and Antonios Anastasopoulos</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 35</span>
+          <h3>Evaluating Cross-Dialect Syntactic Variation: a Theory-Driven Web Resource</h3>
+          <p>Emanuela Li Destri, Marco Longhin, Gaia Sorge, Sofia Ferroni, Giovanni Battista Matteazzi, Andrea Artioli, Lorenzo Carletti, Federico Motta, Giuseppe Longobardi and Cristina Guardiano</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 36</span>
+          <h3>MD_NLP: Reconstructing an Australian English Heritage Dialect Corpus from the Mitchell–Delbridge Recordings through LLM-Assisted Speaker Attribution</h3>
+          <p>Steven Coats</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 37</span>
+          <h3>Structural Divergence under Shared Language-Level Specification: Griko in Universal Dependencies</h3>
+          <p>Stavros Bompolas, Emanuela Pinna, Josep Quer, Marika Lekakou and Stella Markantonatou</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 38</span>
+          <h3>Systematic Normalization of Spoken Mixed-Language, Mixed-Dialect Data</h3>
+          <p>Margaret Blevins</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 39</span>
+          <h3>Digital Preservation of Aromanian Through Knowledge Management and Automatic Speech Recognition Evaluation</h3>
+          <p>Marija Pendevska and Hristina Nastevska</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 41</span>
+          <h3>A Novel Typology of Mutually Intelligible Words: The Case of Slavic Languages</h3>
+          <p>Edward Klyshinsky and Yulia Badryzlova</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 42</span>
+          <h3>Transfer Learning for an Endangered Slavic Variety: Dependency Parsing in Pomak Across Contact-Shaped Dialects</h3>
+          <p>Sercan Karakas</p>
+        </div>
+
+        <div class="paper">
+          <span class="submission-id">ID: 43</span>
+          <h3>Challenges in the Detection of Dialect for Historical Languages; the Case of Old Irish Text Resources</h3>
+          <p>Adrian Doyle</p>
+        </div>
+
+      </div>
+
+      <p id="noResults">No papers match your search.</p>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 DialRes. All rights reserved.</p>
+    </div>
+  </footer>
 
   <script>
-    function searchFunction() {
-      let input = document.getElementById("paperSearch").value.toLowerCase();
-      let table = document.getElementById("papersTable");
-      let tr = table.getElementsByTagName("tr");
-      let noResults = document.getElementById("noResults");
+    function filterPapers() {
+      const input = document.getElementById('paperSearch').value.toLowerCase();
+      const papers = document.getElementsByClassName('paper');
       let count = 0;
 
-      for (let i = 1; i < tr.length; i++) {
-        let textContent = tr[i].textContent.toLowerCase();
-        if (textContent.indexOf(input) > -1) {
-          tr[i].style.display = "";
+      for (let i = 0; i < papers.length; i++) {
+        // Search across the whole paper div content
+        const text = papers[i].textContent.toLowerCase();
+        if (text.includes(input)) {
+          papers[i].style.display = "";
           count++;
         } else {
-          tr[i].style.display = "none";
+          papers[i].style.display = "none";
         }
       }
-      noResults.style.display = count === 0 ? "block" : "none";
+
+      // Show 'No Results' if nothing matches
+      const noRes = document.getElementById('noResults');
+      noRes.style.display = count === 0 ? "block" : "none";
     }
   </script>
+
 </body>
 </html>
