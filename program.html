@@ -30,6 +30,12 @@
       font-weight: bold;
       color: #333;
     }
+    /* CLASS FOR THE RED TEXT */
+    .invited-highlight {
+      color: #d0021b; /* A clear, professional red */
+      font-weight: bold;
+      font-style: normal; /* Removes italics from the break-header for the title */
+    }
     .paper-title {
       display: block;
       font-weight: bold;
@@ -162,7 +168,10 @@
 
         <tr class="break-header">
           <td class="time-col">11:45 - 12:30</td>
-          <td><strong> Invited Talk: "Beyond the Standard: Dialectal Variation at the Heart of NLP"</strong><br><em>Prof. Barbara Plank, LMU Munich, Visiting Prof ITU Copenhagen</em></td>
+          <td>
+          <span class="invited-highlight">Invited Talk: "Beyond the Standard: Dialectal Variation at the Heart of NLP"</span><br>
+            <span style="color: #333; font-style: normal;">Prof. Barbara Plank, LMU Munich, Visiting Prof ITU Copenhagen</span>
+          </td>
         </tr>
         <tr class="break-header">
           <td class="time-col">12:30 - 13:00</td>
