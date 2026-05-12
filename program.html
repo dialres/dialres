@@ -30,11 +30,10 @@
       font-weight: bold;
       color: #333;
     }
-    /* CLASS FOR THE RED TEXT */
     .invited-highlight {
-      color: #d0021b; /* A clear, professional red */
+      color: #d0021b;
       font-weight: bold;
-      font-style: normal; /* Removes italics from the break-header for the title */
+      font-style: normal;
     }
     .paper-title {
       display: block;
@@ -53,6 +52,25 @@
       display: block;
       font-size: 0.85em;
       color: #666;
+    }
+    /* NEW STYLES FOR THE POSTER BUTTON */
+    .poster-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 14px;
+      background-color: #fff5f5; /* Very light red background */
+      color: #d0021b;           /* Professional red text */
+      border: 1px solid #d0021b;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1em;           /* Larger letters */
+      transition: all 0.2s ease-in-out;
+    }
+    .poster-link:hover {
+      background-color: #d0021b;
+      color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
   </style>
 </head>
@@ -181,33 +199,188 @@
 
       <h2 style="margin-top: 50px;">Accepted Posters</h2>
       <table class="program-table">
-        <tr><td><span class="paper-title">Beyond Accuracy: Analyzing Dialect Confusion in Automatic Speech-Based Dialect Classification <a href="https://drive.google.com/file/d/1llCToOWYcQ-AYlJGFiPlj4WiIDCr3c9K/view?usp=sharing" target="_blank" style="font-size: 0.8em; margin-left: 10px; color: #d0021b;">Poster</a></span><span class="authors">Lea Fischbach, Alfred Lameli and Lucie Flek</span></td></tr>
-        
-        <tr><td><span class="paper-title">FLEURS-Kobani: Extending FLEURS dataset for Northern Kurdish</span><span class="authors">Daban Q Jaff and Mohammad Mohammadamini</span></td></tr>
-        <tr><td><span class="paper-title">Exploring the reusability of Northern Kurdish resources for Badini speech recognition</span><span class="authors">Mohammad Mohammadamini, Aveen Jalal Mohammed, Barzan Hussein Mohammed, Dezheen H. Abdulazeez, Imad Saeed Sadeeq, Dilgash Mohammed Salih, Amera Ismail Melhum and Abuobaida Abdullah Dheyab</span></td></tr>
-        <tr><td><span class="paper-title">Wancho Dialectometry: Community-created data and the Living Dictionaries project</span><span class="authors">Kellen Parker van Dam</span></td></tr>
-        <tr><td><span class="paper-title">Dialectometry and Evaluation of the ePark Corpus for Low-Resource Formosan Language Dialects</span><span class="authors">Henry Gagnier</span></td></tr>
-        <tr><td><span class="paper-title">A Dialectal Corpus for Ukrainian: Collection, Classification, and Standardization</span><span class="authors">Yuliia Frund and Sina Ahmadi</span></td></tr>
-        <tr><td><span class="paper-title">German Dialects across Situations, Generations, and Regions: The REDE Corpus as an Oral Resource for NLP</span><span class="authors">Hanna Fischer and Alfred Lameli</span></td></tr>
-        <tr><td><span class="paper-title">A Catalog of Basque Dialectal Resources: Online Collections and Standard-to-Dialectal Adaptations</span><span class="authors">Jaione Bengoetxea, Itziar Gonzalez-Dios and Rodrigo Agerri</span></td></tr>
-        <tr><td><span class="paper-title">WoVis: Interactive Visualization of Word Embeddings for Semantic Change in Historical and Dialectal Language Resources</span><span class="authors">Filip Miletić, Maximilian Henkel, Rene Cutura, Sophie Sadler, Quynh Quang Ngo, Michael Sedlmair and Sabine Schulte im Walde</span></td></tr>
-        <tr><td><span class="paper-title">Speaker Normalization via Voice Conversion Reveals a Human-Machine Dissociation in Dialect Classification</span><span class="authors">Caroline Kleen, Lea Fischbach, Akbar Karimi, Lucie Flek and Alfred Lameli</span></td></tr>
-        <tr><td><span class="paper-title">South Tyrolean Dialect-to-Standard Speech Translation</span><span class="authors">Greta H. Franzini and Luca Ducceschi</span></td></tr>
-        <tr><td><span class="paper-title">TransVar – the Corpus for Variation and Change Study of the Historical Transcarpathian lects</span><span class="authors">Ilia Afanasev</span></td></tr>
-        <tr><td><span class="paper-title">The Generator-Eraser Paradox: Community Guidelines for Responsible LLM-Assisted Dialect Resource Creation</span><span class="authors">Wajdi Zaghouani</span></td></tr>
-        <tr><td><span class="paper-title">The Texas German Dialect Project Corpus as a Diachronic Resource for Investigating Language Contact</span><span class="authors">Thomas Schmidt, Margaret M. Blevins, Hans C Boas and Glenn Gilbert</span></td></tr>
-        <tr><td><span class="paper-title">Pontic Greek in the Caucasus: an online corpus</span><span class="authors">Svetlana Berikashvili and Stavros Skopeteas</span></td></tr>
-        <tr><td><span class="paper-title">Meaning Over Morphology: A Multi-Metric Benchmark of LLMs for Bangla Dialect Translation</span><span class="authors">Soumik Deb Niloy, Subhey Sadi Rahman, Mahbub E Sobhani, Md. Golam Rabiul Alam, Farig Yousuf Sadeque and Md. Rezuwan Hassan</span></td></tr>
-        <tr><td><span class="paper-title">Sociolinguistic aspects of crowdsourcing for a vocal corpus of Alsatian</span><span class="authors">Pascale Erhart, Lucile Hamm, Sam Bigeard, Carole Werner, Malek Yaich and Slim Ouni</span></td></tr>
-        <tr><td><span class="paper-title">HeptaTAX: A Neuro-Symbolic Pipeline and Benchmark for Classifying 16th-Century Heptanesian Notarial Acts</span><span class="authors">Stergios Chatzikyriakidis, Eleni Karantzola and Vasiliki Makri</span></td></tr>
-        <tr><td><span class="paper-title">Towards Semantic Access and Interoperability in Digital Dialectal Atlases. A Case Study</span><span class="authors">Paola Marongiu and Simonetta Montemagni</span></td></tr>
-        <tr><td><span class="paper-title">A CLDF-Compliant Lexical Database for Modern Greek Dialects: Resource Design and Dialectometric Analysis</span><span class="authors">Stavros Bompolas, Natalia Chousou-Polydouri, Manuela Genitsaridi, Danae Karatzanou, Georgios Kostopoulos, Elena Anagnostopoulou and Dimitra Melissaropoulou</span></td></tr>
-        <tr><td><span class="paper-title">A Speech Resource for the Pontic Greek Dialect: Transcription Choices and Baseline ASR Evaluation</span><span class="authors">Rodanna Konstantinidou, Chara Tsoukala, Vivian Stamou, Voula Giouli and Stella Markantonatou</span></td></tr>
-        <tr><td><span class="paper-title">First Steps in ASR for Cypriot Greek: Challenges and Insights</span><span class="authors">Vivian Stamou, Spyros Armostis, Antigoni Klimi, Georgios Paraskevopoulos, Vassilis Katsouros and Antonios Anastasopoulos</span></td></tr>
-        <tr><td><span class="paper-title">Structural Divergence under Shared Language-Level Specification: Griko in Universal Dependencies</span><span class="authors">Stavros Bompolas, Emanuela Pinna, Josep Quer, Marika Lekakou and Stella Markantonatou</span></td></tr>
-        <tr><td><span class="paper-title">Digital Preservation of Aromanian Through Knowledge Management and Automatic Speech Recognition Evaluation</span><span class="authors">Marija Pendevska and Hristina Nastevska</span></td></tr>
-        <tr><td><span class="paper-title">A Novel Typology of Mutually Intelligible Words: The Case of Slavic Languages</span><span class="authors">Edward Klyshinsky and Yulia Badryzlova</span></td></tr>
-        <tr><td><span class="paper-title">Transfer Learning for an Endangered Slavic Variety: Dependency Parsing in Pomak Across Contact-Shaped Dialects</span><span class="authors">Sercan Karakas</span></td></tr>
+        <tr>
+          <td>
+            <span class="paper-title">Beyond Accuracy: Analyzing Dialect Confusion in Automatic Speech-Based Dialect Classification</span>
+            <span class="authors">Lea Fischbach, Alfred Lameli and Lucie Flek</span>
+            <a href="https://drive.google.com/file/d/1llCToOWYcQ-AYlJGFiPlj4WiIDCr3c9K/view?usp=sharing" target="_blank" class="poster-link">Poster</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="paper-title">FLEURS-Kobani: Extending FLEURS dataset for Northern Kurdish</span>
+            <span class="authors">Daban Q Jaff and Mohammad Mohammadamini</span>
+            <a href="#" target="_blank" class="poster-link">Poster</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="paper-title">Exploring the reusability of Northern Kurdish resources for Badini speech recognition</span>
+            <span class="authors">Mohammad Mohammadamini, Aveen Jalal Mohammed, Barzan Hussein Mohammed, Dezheen H. Abdulazeez, Imad Saeed Sadeeq, Dilgash Mohammed Salih, Amera Ismail Melhum and Abuobaida Abdullah Dheyab</span>
+            <a href="#" target="_blank" class="poster-link">Poster</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="paper-title">Wancho Dialectometry: Community-created data and the Living Dictionaries project</span>
+            <span class="authors">Kellen Parker van Dam</span>
+            <a href="#" target="_blank" class="poster-link">Poster</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="paper-title">Dialectometry and Evaluation of the ePark Corpus for Low-Resource Formosan Language Dialects</span>
+            <span class="authors">Henry Gagnier</span>
+            <a href="#" target="_blank" class="poster-link">Poster</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="paper-title">A Dialectal Corpus for Ukrainian: Collection, Classification, and Standardization</span>
+            <span class="authors">Yuliia Frund and Sina Ahmadi</span>
+            <a href="#" target="_blank" class="poster-link">Poster</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="paper-title">German Dialects across Situations, Generations, and Regions: The REDE Corpus as an Oral Resource for NLP</span>
+            <span class="authors">Hanna Fischer and Alfred Lameli</span>
+            <a href="#" target="_blank" class="poster-link">Poster</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="paper-title">A Catalog of Basque Dialectal Resources: Online Collections and Standard-to-Dialectal Adaptations</span>
+            <span class="authors">Jaione Bengoetxea, Itziar Gonzalez-Dios and Rodrigo Agerri</span>
+            <a href="#" target="_blank" class="poster-link">Poster</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="paper-title">WoVis: Interactive Visualization of Word Embeddings for Semantic Change in Historical and Dialectal Language Resources</span>
+            <span class="authors">Filip Miletić, Maximilian Henkel, Rene Cutura, Sophie Sadler, Quynh Quang Ngo, Michael Sedlmair and Sabine Schulte im Walde</span>
+            <a href="#" target="_blank" class="poster-link">Poster</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="paper-title">Speaker Normalization via Voice Conversion Reveals a Human-Machine Dissociation in Dialect Classification</span>
+            <span class="authors">Caroline Kleen, Lea Fischbach, Akbar Karimi, Lucie Flek and Alfred Lameli</span>
+            <a href="#" target="_blank" class="poster-link">Poster</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="paper-title">South Tyrolean Dialect-to-Standard Speech Translation</span>
+            <span class="authors">Greta H. Franzini and Luca Ducceschi</span>
+            <a href="#" target="_blank" class="poster-link">Poster</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="paper-title">TransVar – the Corpus for Variation and Change Study of the Historical Transcarpathian lects</span>
+            <span class="authors">Ilia Afanasev</span>
+            <a href="#" target="_blank" class="poster-link">Poster</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="paper-title">The Generator-Eraser Paradox: Community Guidelines for Responsible LLM-Assisted Dialect Resource Creation</span>
+            <span class="authors">Wajdi Zaghouani</span>
+            <a href="#" target="_blank" class="poster-link">Poster</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="paper-title">The Texas German Dialect Project Corpus as a Diachronic Resource for Investigating Language Contact</span>
+            <span class="authors">Thomas Schmidt, Margaret M. Blevins, Hans C Boas and Glenn Gilbert</span>
+            <a href="#" target="_blank" class="poster-link">Poster</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="paper-title">Pontic Greek in the Caucasus: an online corpus</span>
+            <span class="authors">Svetlana Berikashvili and Stavros Skopeteas</span>
+            <a href="#" target="_blank" class="poster-link">Poster</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="paper-title">Meaning Over Morphology: A Multi-Metric Benchmark of LLMs for Bangla Dialect Translation</span>
+            <span class="authors">Soumik Deb Niloy, Subhey Sadi Rahman, Mahbub E Sobhani, Md. Golam Rabiul Alam, Farig Yousuf Sadeque and Md. Rezuwan Hassan</span>
+            <a href="#" target="_blank" class="poster-link">Poster</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="paper-title">Sociolinguistic aspects of crowdsourcing for a vocal corpus of Alsatian</span>
+            <span class="authors">Pascale Erhart, Lucile Hamm, Sam Bigeard, Carole Werner, Malek Yaich and Slim Ouni</span>
+            <a href="#" target="_blank" class="poster-link">Poster</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="paper-title">HeptaTAX: A Neuro-Symbolic Pipeline and Benchmark for Classifying 16th-Century Heptanesian Notarial Acts</span>
+            <span class="authors">Stergios Chatzikyriakidis, Eleni Karantzola and Vasiliki Makri</span>
+            <a href="#" target="_blank" class="poster-link">Poster</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="paper-title">Towards Semantic Access and Interoperability in Digital Dialectal Atlases. A Case Study</span>
+            <span class="authors">Paola Marongiu and Simonetta Montemagni</span>
+            <a href="#" target="_blank" class="poster-link">Poster</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="paper-title">A CLDF-Compliant Lexical Database for Modern Greek Dialects: Resource Design and Dialectometric Analysis</span>
+            <span class="authors">Stavros Bompolas, Natalia Chousou-Polydouri, Manuela Genitsaridi, Danae Karatzanou, Georgios Kostopoulos, Elena Anagnostopoulou and Dimitra Melissaropoulou</span>
+            <a href="#" target="_blank" class="poster-link">Poster</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="paper-title">A Speech Resource for the Pontic Greek Dialect: Transcription Choices and Baseline ASR Evaluation</span>
+            <span class="authors">Rodanna Konstantinidou, Chara Tsoukala, Vivian Stamou, Voula Giouli and Stella Markantonatou</span>
+            <a href="#" target="_blank" class="poster-link">Poster</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="paper-title">First Steps in ASR for Cypriot Greek: Challenges and Insights</span>
+            <span class="authors">Vivian Stamou, Spyros Armostis, Antigoni Klimi, Georgios Paraskevopoulos, Vassilis Katsouros and Antonios Anastasopoulos</span>
+            <a href="#" target="_blank" class="poster-link">Poster</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="paper-title">Structural Divergence under Shared Language-Level Specification: Griko in Universal Dependencies</span>
+            <span class="authors">Stavros Bompolas, Emanuela Pinna, Josep Quer, Marika Lekakou and Stella Markantonatou</span>
+            <a href="#" target="_blank" class="poster-link">Poster</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="paper-title">Digital Preservation of Aromanian Through Knowledge Management and Automatic Speech Recognition Evaluation</span>
+            <span class="authors">Marija Pendevska and Hristina Nastevska</span>
+            <a href="#" target="_blank" class="poster-link">Poster</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="paper-title">A Novel Typology of Mutually Intelligible Words: The Case of Slavic Languages</span>
+            <span class="authors">Edward Klyshinsky and Yulia Badryzlova</span>
+            <a href="#" target="_blank" class="poster-link">Poster</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="paper-title">Transfer Learning for an Endangered Slavic Variety: Dependency Parsing in Pomak Across Contact-Shaped Dialects</span>
+            <span class="authors">Sercan Karakas</span>
+            <a href="#" target="_blank" class="poster-link">Poster</a>
+          </td>
+        </tr>
       </table>
     </div>
   </section>
