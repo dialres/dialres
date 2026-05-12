@@ -16,9 +16,8 @@
       background-color: #0F4761;
       color: white;
     }
-    /* HIGHLIGHTED COLOR FOR POSTER/BREAK SLOTS */
     .program-table tr.break-header {
-      background-color: #e3f2fd; /* Light blue/teal highlight */
+      background-color: #e3f2fd; 
       border-top: 2px solid #0F4761;
       border-bottom: 2px solid #0F4761;
       font-style: normal;
@@ -56,22 +55,40 @@
       font-size: 0.85em;
       color: #666;
     }
-    /* POSTER BUTTON */
-    .poster-link {
+    
+    /* BUTTON STYLES */
+    .poster-link, .video-link {
       display: inline-block;
       margin-top: 10px;
+      margin-right: 8px;
       padding: 6px 14px;
-      background-color: #fff5f5;
-      color: #d0021b;
-      border: 1px solid #d0021b;
       border-radius: 4px;
       text-decoration: none;
       font-weight: bold;
       font-size: 1em;
       transition: all 0.2s ease-in-out;
     }
+
+    /* Red Poster Button */
+    .poster-link {
+      background-color: #fff5f5;
+      color: #d0021b;
+      border: 1px solid #d0021b;
+    }
     .poster-link:hover {
       background-color: #d0021b;
+      color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    /* Blue Video Button */
+    .video-link {
+      background-color: #f0f7ff;
+      color: #0056b3;
+      border: 1px solid #0056b3;
+    }
+    .video-link:hover {
+      background-color: #0056b3;
       color: white;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
@@ -106,7 +123,7 @@
       <table class="program-table">
         <tr class="session-header">
           <td class="time-col">09:00 - 10:30</td>
-          <td><strong>Session A - Carbera 1 (on the 2nd floor)</strong></td>
+          <td><strong>Session A - Cabrera 1 (on the 2nd floor)</strong></td>
         </tr>
         <tr>
           <td class="time-col">09:10 - 09:20</td>
@@ -141,20 +158,21 @@
           </td>
         </tr>
 
-        <!-- HIGHLIGHTED TRANSITION SLOTS -->
         <tr class="break-header">
           <td class="time-col">10:00 - 10:30</td>
-          <td><strong>2-minute poster presentations</strong></td>
+          <td><strong>2-minute poster presentations</strong> (Cabrera 1)</td>
         </tr>
         <tr class="break-header">
           <td class="time-col">10:30 - 11:00</td>
-          <td><strong>Poster Session  & coffee break</strong> (Running in parallel)</td>
-          <span style="color: #0F4761;"><strong>Menorca Hall (on the 3rd floor)</strong></span>
+          <td>
+            <strong>Poster Session & coffee break</strong> (Running in parallel)<br>
+            <span style="color: #0F4761; font-weight: bold;">Menorca Hall (on the 3rd floor)</span>
+          </td>
         </tr>
 
         <tr class="session-header">
           <td class="time-col">11:00 - 13:00</td>
-          <td><strong>Session B - Carbera 1 (on the 2nd floor)</strong></td>
+          <td><strong>Session B - Cabrera 1 (on the 2nd floor)</strong></td>
         </tr>
         <tr>
           <td class="time-col">11:00 - 11:10</td>
@@ -209,6 +227,7 @@
             <span class="paper-title">Beyond Accuracy: Analyzing Dialect Confusion in Automatic Speech-Based Dialect Classification</span>
             <span class="authors">Lea Fischbach, Alfred Lameli and Lucie Flek</span>
             <a href="https://drive.google.com/file/d/1llCToOWYcQ-AYlJGFiPlj4WiIDCr3c9K/view?usp=sharing" target="_blank" class="poster-link">Poster</a>
+            <a href="#" target="_blank" class="video-link">Video</a>
           </td>
         </tr>
         <tr>
@@ -339,7 +358,7 @@
         </tr>
         <tr>
           <td>
-            <span class="paper-title">A CLDF-Compliant Lexical Database for Modern Greek Dialects: Resource Design and Dialectometric Analysis</span>
+            <span class="paper-title">A CLDF-Complical Database for Modern Greek Dialects: Resource Design and Dialectometric Analysis</span>
             <span class="authors">Stavros Bompolas, Natalia Chousou-Polydouri, Manuela Genitsaridi, Danae Karatzanou, Georgios Kostopoulos, Elena Anagnostopoulou and Dimitra Melissaropoulou</span>
             <a href="#" target="_blank" class="poster-link">Poster</a>
           </td>
